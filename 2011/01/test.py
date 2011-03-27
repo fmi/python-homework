@@ -2,9 +2,6 @@ import unittest
 import homework
 
 class FirstHomeworkTests(homework.Test):
-    def test_make_multiset_empty(self):
-        self.assertEquals({}, self.solution.make_multiset([]))
-
     def test_make_multiset_no_duplicates(self):
         self.assertEquals({1: 1, 2: 1}, self.solution.make_multiset([1, 2]))
 
@@ -20,9 +17,6 @@ class FirstHomeworkTests(homework.Test):
     test_make_multiset_with_duplicates_again = test_make_multiset_with_duplicates
 
 
-
-    def test_ordered_dict_empty(self):
-        self.assertEquals([], self.solution.ordered_dict({}))
 
     def test_ordered_dict_homogeneous_keys(self):
         self.assertEquals(
@@ -41,9 +35,6 @@ class FirstHomeworkTests(homework.Test):
     test_ordered_dict_heterogeneous_keys_again = test_ordered_dict_heterogeneous_keys
 
 
-
-    def test_reversed_dict_empty(self):
-        self.assertEquals({}, self.solution.reversed_dict({}))
 
     def test_reversed_dict_no_repeating_values(self):
         self.assertEquals(
@@ -66,12 +57,6 @@ class FirstHomeworkTests(homework.Test):
     test_reversed_dict_repeating_values_again = test_reversed_dict_repeating_values
 
 
-
-    def test_unique_objects_empty(self):
-        self.assertEquals(0, self.solution.unique_objects([]))
-
-    def test_unique_objects_unique_only(self):
-        self.assertEquals(3, self.solution.unique_objects([1, 2, 3]))
 
     def test_unique_objects_identical_immutables(self):
         self.assertEquals(7, self.solution.unique_objects([1, 2, 3, 2, 1, 5, 42, None, 'asd']))
