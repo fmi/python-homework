@@ -37,7 +37,7 @@
 Пример:
 
 	>>> lazy_number = Lazy(8) + Lazy(42)
-	>>> number = number.force()
+	>>> number = lazy_number.force()
 	>>> print(number)
 	50
 
