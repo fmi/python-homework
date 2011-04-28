@@ -1,5 +1,5 @@
 import unittest
-from predicates import gt, lt, pred, for_any, for_all, present, eq, oftype
+from solution import gt, lt, pred, for_any, for_all, present, eq, oftype
 
 class PredicatesTest(unittest.TestCase):
     def test_simple_gt(self):
