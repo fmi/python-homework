@@ -20,7 +20,7 @@
             print("A spaceship and an asteroid")
     
         @collide.multimethod
-        def collide(self, a: Spaceship, b: Asteroid):
+        def collide(self, a: Asteroid, b: Spaceship):
             self.collide(b, a)
     
         @collide.multimethod
@@ -33,7 +33,7 @@
     detector = CollisionDetector()
     
     detector.collide(a, a) # Two asteroids
-    detector.collide(a, s) # A spaceship and an asteroid
+    detector.collide(s, a) # A spaceship and an asteroid
     detector.collide(s, s) # Two spaceships
 
 ## Правилата
