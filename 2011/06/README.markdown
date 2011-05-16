@@ -51,23 +51,23 @@
 ## Друг пример
 
     class Spam:
-        @multimethods
+        @multimethod
         def eggs(self, a: int, b: int):
             print("1")
     
-        @eggs.multimethods
+        @eggs.multimethod
         def eggs(self, a, b: int):
             print("2")
     
-        @eggs.multimethods
+        @eggs.multimethod
         def eggs(self, a: str, b):
             print("3")
     
-        @eggs.multimethods
+        @eggs.multimethod
         def eggs(self, a: object, b: object):
             print("4")
     
-        @eggs.multimethods
+        @eggs.multimethod
         def eggs(self, a: float, b: float):
             print("5")
     
@@ -76,4 +76,4 @@
     spam.eggs('x', 420) # 2
     spam.eggs('x', 'x') # 3
     spam.eggs(1.0, 'x') # 4
-    spem.eggs(1.0, 1.0) # 1
+    spam.eggs(1.0, 1.0) # 4
