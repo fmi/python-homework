@@ -24,7 +24,7 @@ class MultiDispatchTest(unittest.TestCase):
             def eggs(self, arg: object):
                 return 'object'
 
-        self.assertEqual('object', Spam.eggs(12))
+        self.assertEqual('object', Spam().eggs(12))
 
     def test_cannot_dispatch(self):
         class Spam:
