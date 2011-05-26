@@ -101,7 +101,7 @@ Eine Kleine Nachtmusik; W.A. Mozart;        Classical;          popular, violin
     collection.find('songs', tags='popular', artist="John Coltrane")
     
     # Връща имена на песни, които започват с думичката "My":
-    collection.find('songs', re.compile(r'^My\b'))
+    collection.find('songs', name=re.compile(r'^My\b'))
     
     # Връща имената на всички артисти, които имат поне една песен с етикет jazz:
     collection.find('artists', tags='jazz')
