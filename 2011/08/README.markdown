@@ -17,26 +17,27 @@
 
 Песните са записани в текстов файл със следния формат:
 
-    My Favourite Things;    John Coltrane;      Jazz, Bebop;        popular, cover
-    Greensleves;            John Coltrane;      Jazz, Bebop;        popular, cover
-    Alabama;                John Coltrane;      Jazz, Avantgarde;   melancholic
-    Acknowledgement;        John Coltrane;      Jazz, Avantgarde;
-    Afro Blue;              John Coltrane;      Jazz;               melancholic
-    'Round Midnight;        John Coltrane;      Jazz;
-    My Funny Valentine;     Miles Davis;        Jazz;               popular
-    Tutu;                   Miles Davis;        Jazz, Fusion;
-    Miles Runs The Voodo Down; Miles Davis;     Jazz, Fusion;
-    Boplicity;              Miles Davis;        Jazz, Bebop;
-    Autumn Leaves;          Bill Evans;         Jazz;               popular
-    Waltz for Debbie;       Bill Evans;         Jazz;
-    'Round Midnight;        Thelonious Monk;    Jazz, Bebop;
-    Ruby, My Dear;          Thelonious Monk;    Jazz;               saxophone
-    Fur Elise;              L.v. Beethoven;     Classical;          popular
-    Moonlight Sonata;       L.v. Beethoven;     Classical;          popular
-    Pathetique;             L.v. Beethoven;     Classical;
-    Toccata e Fuga;         J.S. Bach;          Classical, Baroque; popular
-    Goldberg Variations;    J.S. Bach;          Classical, Baroque;
-    Eine Kleine Nachtmusik; W.A. Mozart;        Classical;          popular, violin
+<pre class="plain">My Favourite Things;    John Coltrane;      Jazz, Bebop;        popular, cover
+Greensleves;            John Coltrane;      Jazz, Bebop;        popular, cover
+Alabama;                John Coltrane;      Jazz, Avantgarde;   melancholic
+Acknowledgement;        John Coltrane;      Jazz, Avantgarde;
+Afro Blue;              John Coltrane;      Jazz;               melancholic
+'Round Midnight;        John Coltrane;      Jazz;
+My Funny Valentine;     Miles Davis;        Jazz;               popular
+Tutu;                   Miles Davis;        Jazz, Fusion;
+Miles Runs The Voodo Down; Miles Davis;     Jazz, Fusion;
+Boplicity;              Miles Davis;        Jazz, Bebop;
+Autumn Leaves;          Bill Evans;         Jazz;               popular
+Waltz for Debbie;       Bill Evans;         Jazz;
+'Round Midnight;        Thelonious Monk;    Jazz, Bebop;
+Ruby, My Dear;          Thelonious Monk;    Jazz;               saxophone
+Fur Elise;              L.v. Beethoven;     Classical;          popular
+Moonlight Sonata;       L.v. Beethoven;     Classical;          popular
+Pathetique;             L.v. Beethoven;     Classical;
+Toccata e Fuga;         J.S. Bach;          Classical, Baroque; popular
+Goldberg Variations;    J.S. Bach;          Classical, Baroque;
+Eine Kleine Nachtmusik; W.A. Mozart;        Classical;          popular, violin
+</pre>
 
 * Стойностите са разделени с точка и запетая (;)
 * Може да има повторения както в имена на песни, така и на артисти
