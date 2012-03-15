@@ -2,7 +2,7 @@
 
 Можете да изпълните теста с:
 
-    python test.py solution.py
+    python test.py
 
 Променете `solution.py` с вашия код за да видите собствените си резултати
 
