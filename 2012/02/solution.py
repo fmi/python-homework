@@ -20,7 +20,7 @@ def create_board(fill_rate = 0.3):
              and rand.normalvariate(0.5,0.2) < fill_rate) for x in range(0,BOARD_SIZE + 2)] for y in range(0,BOARD_SIZE + 2)]
 
 def step_board(board):
-    pass
+    pass # Пишете тук
 
 if __name__ == '__main__':
     board = create_board()
