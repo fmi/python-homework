@@ -1,7 +1,7 @@
-import unitetest
+import unittest
 from solution import *
 
-class BiDictTestCase(unitetest.TestCase):
+class BiDictTestCase(unittest.TestCase):
     def setUp(self):
         self.person = BiDict({'name': 'Кънчо', 'age': 18, 'sex': 'M'})
 
