@@ -9,7 +9,7 @@ class BiDictTestCase(unittest.TestCase):
         self.assertEqual(self.person['name'], 'Кънчо')
 
     def test_inverse(self):
-        self.person.invert()
+        self.person.inverse()
         self.assertIn('Кънчо', self.person.keys())
 
     def test_invalid_value(self):
