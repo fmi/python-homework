@@ -9,7 +9,7 @@
 
 _Пример_
 
-    >>> p = semi_primes()
+    >>> p = primes()
     >>> print(next(p)) # 2
     2
     >>> print(next(p)) # 3
