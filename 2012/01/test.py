@@ -33,15 +33,6 @@ class FirstHomeworkTests(unittest.TestCase):
     def test_spam_and_eggs_with_additional_multipliers(self):
         self.assertEqual('spam spam and eggs', prepare_meal(45 * 8 * 7))
 
-    def test_thousands_of_spams(self):
-        two_thousand_spams = (' spam'*2000)[1:]
-        self.assertEqual(two_thousand_spams, prepare_meal(3 ** 2000))
-
-    def test_thousands_of_spams_and_eggs(self):
-        two_thousand_spams_and_eggs = (' spam'*2000 + ' and eggs')[1:]
-        self.assertEqual(two_thousand_spams_and_eggs, prepare_meal(3 ** 2000 * 5 ** 500))
-
-
 
 if __name__ == '__main__':
     unittest.main()
