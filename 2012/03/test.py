@@ -68,6 +68,35 @@ class BiDictTestCase(unittest.TestCase):
         self.assertIn('keys', dir(self.person))
         self.assertIn('pop', dir(self.person))
         self.assertIn('copy', dir(self.person))
+        self.assertIn('items', dir(self.person))
+
+    def test_insert_existing_key_with_existing_value(self):
+        new_person = self.person.copy()
+        new_person['name'] = 18
+        self.assertIn('name', new_person.keys())
+        self.assertIn(18, new_person.values())
+        self.assertNotIn('age', new_person.keys())
+
+    def test_insert_existing_key_with_none_existing_value(self):
+        new_person = self.person.copy()
+        new_person['name'] = -1
+        self.assertIn('name', new_person.keys())
+        self.assertIn(-1, new_person.values())
+        self.assertNotIn('Кънчо', new_person.values())
+
+    def test_insert_none_existing_key_with_existing_value(self):
+        new_person = self.person.copy()
+        new_person['none'] = 18
+        self.assertIn('none', new_person.keys())
+        self.assertIn(18, new_person.values())
+        self.assertNotIn('age', new_person.keys())
+
+    def test_insert_none_existing_key_with_none_existing_value(self):
+        new_person = self.person.copy()
+        new_person['none'] = -1
+        self.assertIn('none', new_person.keys())
+        self.assertIn(-1, new_person.values())
+        self.assertEqual(len(self.person.keys()) + 1, len(new_person.keys()))
 
 if __name__ == '__main__':
     unittest.main()
