@@ -63,6 +63,8 @@ class TicTacHomeworkTest(unittest.TestCase):
         v["B3"] = 'X'
         v["A3"] = 'O'
 
+        self.assertEqual('O wins!', h.game_status())
+
     def test_draw(self):
         d = solution.TicTacToeBoard()
         d["A1"] = 'O'
