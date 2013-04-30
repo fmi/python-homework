@@ -28,12 +28,12 @@
 
     >>> dragon = dragon_fractal()
     >>> next(dragon)
-    up
+    'up'
     >>> next(dragon)
-    left
+    'left'
     >>> next(dragon)
-    down
+    'down'
     >>> next(dragon)
-    left
+    'left'
     >>> next(dragon)
-    down
+    'down'
