@@ -7,10 +7,13 @@
 ще можете да си направите свой собствен драконов фрактал като [този](http://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Fractal_dragon_curve.jpg/220px-Fractal_dragon_curve.jpg)
 
 Стъпки:
+
 1. Изберете си начална точка.
 2. Начертавате произволна отсечка нагоре: ![0](https://raw.github.com/fmi/python-homework/master/2013/challenges/static/dragons/0.png)
 3. Приемате точката, до която сте стигнали за точка на въртене и завъртате целия обект на 90 градуса по часовниковата стрелка: ![1](https://raw.github.com/fmi/python-homework/master/2013/challenges/static/dragons/1.png)
 4. Повтаряте стъпка 3 докато ви писне: ![2](https://raw.github.com/fmi/python-homework/master/2013/challenges/static/dragons/2.png)
+
+
 Ето и следващата итерация: ![3](https://raw.github.com/fmi/python-homework/master/2013/challenges/static/dragons/3.png)
 
 И идва време за условието на задача. Тъй като вече знаете как се прави драконов фрактал
