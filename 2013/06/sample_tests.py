@@ -11,7 +11,7 @@ class PythonTest(unittest.TestCase):
         world = World(25)
         py_size = 3
         py = Python(world, Vec2D(10, 10), py_size, direction)
-        self.assertEqual(world[10][10].contents, py.head)
+        self.assertIsInstance(world[10][10].contents, PythonHead)
 
     def test_python_movement_basic(self):
         directions = [Python.UP, Python.DOWN, Python.LEFT, Python.DOWN]
@@ -24,8 +24,7 @@ class PythonTest(unittest.TestCase):
         py.move(direction)
         x, y = Vec2D(10, 10) + direction
 
-        self.assertEqual(world[x][y].contents, py.head)
-
+        self.assertIsInstance(world[x][y].contents, PythonHead)
 
     def test_wallpunch_death(self):
         world = World(20)
@@ -33,6 +32,7 @@ class PythonTest(unittest.TestCase):
 
         with self.assertRaises(Death):
             {py.move(Python.LEFT) for repeat in range(0, 10)}
+
 
 class WorldTest(unittest.TestCase):
     def test_bigbang(self):
