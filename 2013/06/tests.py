@@ -55,11 +55,11 @@ class PythonTest(unittest.TestCase):
 
     def test_snake_death(self):
         world = World(20)
-        py1 = Python(world, Vec2D(5, 5), 3, Python.LEFT)
-        py2 = Python(world, Vec2D(5, 8), 3, Python.RIGHT)
+        py1 = Python(world, Vec2D(5, 5), 3, Python.UP)
+        py2 = Python(world, Vec2D(8, 5), 3, Python.UP)
 
         with self.assertRaises(Death):
-            {py2.move(Python.UP) for repeat in range(0, 5)}
+            {py2.move(Python.LEFT) for repeat in range(0, 5)}
 
     def test_growth(self):
         world = World(20)
