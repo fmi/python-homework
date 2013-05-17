@@ -25,7 +25,7 @@ class PythonTest(unittest.TestCase):
         world = World(25)
         py_size = randint(3, 5)
         py = Python(world, Vec2D(10, 10), py_size, direction)
-        old_direction = py.direction
+
         py.move(direction)
         x, y = Vec2D(10, 10) + direction
 
