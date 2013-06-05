@@ -58,20 +58,39 @@ class PythonTest(unittest.TestCase):
         py1 = Python(world, Vec2D(5, 5), 3, Python.UP)
         py2 = Python(world, Vec2D(8, 5), 3, Python.UP)
 
-        with self.assertRaises(Death):
+        cartesian_coord = False
+
+        try:
             {py2.move(Python.LEFT) for repeat in range(0, 5)}
+        except Death:
+            cartesian_coord = True
+
+        py2 = Python(world, Vec2D(5, 8), 3, Python.UP)
+        screen_coord = False
+
+        try:
+            {py2.move(Python.LEFT) for repeat in range(0, 5)}
+        except Death:
+            cartesian_coord = True
+
+        self.assertTrue(cartesian_coord or screen_coord)
 
     def test_growth(self):
         world = World(20)
         py = Python(world, Vec2D(10, 10), 3, Python.LEFT)
         food = Food(energy=5)
         world[8][10] = Cell(food)
+        world[10][8] = Cell(food)
 
         py.move(Python.LEFT)
         self.assertEqual(py.size, 3)
 
         py.move(Python.LEFT)
-        self.assertIsInstance(world[8][10].contents, PythonHead)
+
+        cartesian_coord = isinstance(world[8][10].contents, PythonHead)
+        screen_coord = isinstance(world[10][8].contents, PythonHead)
+        self.assertTrue(cartesian_coord or screen_coord)
+
         self.assertEqual(py.size, 4)
 
     def test_move_backwards(self):
