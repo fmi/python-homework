@@ -16,8 +16,8 @@
 
 ## Пример ##
 
-    >>> is_happy(6)
+    >>> is_perfect(6)
     <<< True
 
-    >>> is_happy(10)
+    >>> is_perfect(10)
     <<< False
