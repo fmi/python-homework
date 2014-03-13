@@ -45,4 +45,4 @@
     >>> anagrams(['army', 'mary', 'ramy', 'astronomer', 'moonstarer', 'debit card', 'bad credit', 'bau'])
     [['army', 'mary', 'ramy'], ['astronomer', 'moonstarer'], ['debit card', 'bad credit'], ['bau']]
 
-Забележка: вашето решение може да връща списъците или думите в различен ред. [['astronomer', 'moonstarer'], ['bau'], ['debit card', 'bad credit'], ['mary', 'army', 'ramy']] също е валиден отговор.
+Забележка: вашето решение може да връща списъците или думите в различен ред. `[['astronomer', 'moonstarer'], ['bau'], ['debit card', 'bad credit'], ['mary', 'army', 'ramy']]` също е валиден отговор.
