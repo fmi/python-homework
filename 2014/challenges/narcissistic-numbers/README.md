@@ -18,7 +18,7 @@
 
 Естественото (в рамките на тази задача ще считаме и 0 за естествено) число ```n``` се нарича нарцистично, ако
 изпълнява следното условие:
-![](https://github.com/fmi/python-secrets/raw/master/challenges/02/images/condition.png)
+![](https://raw.github.com/fmi/python-homework/master/2014/challenges/narcissistic-numbers/images/condition.png)
 
 Тоест сумата от цифрите на чилото, повдигнати на степен броя на цифрите, да е
 самото число.
@@ -27,9 +27,9 @@
 
 #### Примери ####
 
-![](https://github.com/fmi/python-secrets/raw/master/challenges/02/images/example0.png)
+![](https://raw.github.com/fmi/python-homework/master/2014/challenges/narcissistic-numbers/images/example0.png)
 
-![](https://github.com/fmi/python-secrets/raw/master/challenges/02/images/example1.png)
+![](https://raw.github.com/fmi/python-homework/master/2014/challenges/narcissistic-numbers/images/example1.png)
 
 ## След всичките дефиниции ето и самото условие ##
 
