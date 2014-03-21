@@ -4,9 +4,20 @@ import random
 from solution import Card, RANKS, SUITS, CardCollection
 
 
-def random_card():
-    return Card(random.choice(list(RANKS.values())),
-                random.choice(list(SUITS.values())))
+Card.__hash__ = lambda self: 1
+
+
+def random_cards(count=1):
+    if count == 1:
+        return Card(random.choice(list(RANKS.values())),
+                    random.choice(list(SUITS.values())))
+
+    cards = set()
+    while len(cards) < count:
+        cards.add(Card(random.choice(list(RANKS.values())),
+                       random.choice(list(SUITS.values()))))
+
+    return cards
 
 
 class CardTest(unittest.TestCase):
@@ -41,7 +52,7 @@ class CardCollectionTest(unittest.TestCase):
 
     def test_deck_add(self):
         deck = CardCollection()
-        card1, card2 = random_card(), random_card()
+        card1, card2 = random_cards(2)
 
         deck.add(card1)
         self.assertEqual(deck[0], card1)
