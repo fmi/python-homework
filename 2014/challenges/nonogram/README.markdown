@@ -5,7 +5,7 @@
 запълнят и кои не, като се взимат под внимание числата дадени по краищата на
 решетката.
 
-![nonogram](images/nonogram.png)
+![nonogram](https://raw.githubusercontent.com/fmi/python-homework/master/2014/challenges/nonogram/images/nonogram.png)
 
 За целта в ляво на всеки ред и в горната част на всяка колона има поредица от
 числа. Те указват бройката на последователните черни квадратчета съответно по
@@ -62,11 +62,11 @@ True
 
 #### Python ####
 
-![python](images/python.png)
+![python](https://raw.githubusercontent.com/fmi/python-homework/master/2014/challenges/nonogram/images/python.png)
 
 #### Ruby ####
 
-![ruby](images/ruby.png)
+![ruby](https://raw.githubusercontent.com/fmi/python-homework/master/2014/challenges/nonogram/images/ruby.png)
 
 [Тук](http://onlinenonograms.com/sozdanie) може да си поиграете и нарисувате
 свои нонограми, които директно се превръщат в тестове(е да, играчка си е да
