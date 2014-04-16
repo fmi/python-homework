@@ -63,8 +63,8 @@ class ValidationsTest(unittest.TestCase):
         self.assertFalse(solution.Validations.is_time('not a time'))
 
     def test_validates_datetime_values(self):
-        self.assertTrue(solution.Validations.is_date_time('2012-11-19 19:00:00'))
-        self.assertFalse(solution.Validations.is_date_time('foo'))
+        self.assertTrue(solution.Validations.is_datetime('2012-11-19 19:00:00'))
+        self.assertFalse(solution.Validations.is_datetime('foo'))
 
 
 if __name__ == '__main__':
