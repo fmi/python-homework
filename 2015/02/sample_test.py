@@ -56,7 +56,7 @@ class FlattenDictTest(unittest.TestCase):
 class UnflattenDictTest(unittest.TestCase):
     def test_with_three_levels_of_nesting(self):
         self.assertEqual(
-            {'a': 1, 'b': {'a': 2, 'b': {'a: 1'}}},
+            {'a': 1, 'b': {'a': 2, 'b': {'a': 1}}},
             s.unflatten_dict({'a': 1, 'b.a': 2, 'b.b.a': 1})
         )
 
