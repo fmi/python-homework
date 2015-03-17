@@ -23,7 +23,6 @@ class ReversedDictTest(unittest.TestCase):
             "Palestine": "Jerusalem",
             "Sweden": "Stockholm"
         }
-
         self.assertEqual(s.reversed_dict(input)['Stockholm'], 'Sweden')
         self.assertEqual(s.reversed_dict(input)['Vienna'], 'Austria')
         self.assertIn('Jerusalem', s.reversed_dict(input))
@@ -40,33 +39,32 @@ class ReversedDictTest(unittest.TestCase):
 
 
 class FlattenDictTest(unittest.TestCase):
-
     def test_with_three_levels_of_nesting(self):
         self.assertEqual(
-            {'a': 1, 'b': {'a': 2, 'b': {'a: 1'}}},
-            s.flatten_dict({'a': 1, 'b.a': 2, 'b.b.a': 1})
+            {'a': 1, 'b.a': 2, 'b.b.a': 1},
+            s.flatten_dict({'a': 1, 'b': {'a': 2, 'b': {'a': 1}}}),
         )
 
     def test_example(self):
         self.assertEqual(
-            {'a': 1, 'c': {'a': 2, 'b': {'x': 5, 'y': 9, }}, 'd': [1, 2, 3]},
-            s.flatten_dict({'a': 1, 'c.a': 2, 'c.b.x': 5,
-                            'c.b.y': 9, 'd': [1, 2, 3]})
+            {'a': 1, 'c.a': 2, 'c.b.x': 5, 'c.b.y': 9, 'd': [1, 2, 3]},
+            s.flatten_dict({'a': 1, 'c': {'a': 2, 'b': {'x': 5, 'y': 9}},
+                            'd': [1, 2, 3]}),
         )
 
 
 class UnflattenDictTest(unittest.TestCase):
     def test_with_three_levels_of_nesting(self):
         self.assertEqual(
-            {'a': 1, 'b.a': 2, 'b.b.a': 1},
-            s.unflatten_dict({'a': 1, 'b': {'a': 2, 'b': {'a: 1'}}})
+            {'a': 1, 'b': {'a': 2, 'b': {'a: 1'}}},
+            s.unflatten_dict({'a': 1, 'b.a': 2, 'b.b.a': 1})
         )
 
-    def test_example_case(self):
+    def test_example(self):
         self.assertEqual(
-            {'a': 1, 'c.a': 2, 'c.b.x': 5, 'c.b.y': 9, 'd': [1, 2, 3]},
-            s.unflatten_dict({'a': 1, 'c': {'a': 2, 'b': {'x': 5, 'y': 9}},
-                              'd': [1, 2, 3]})
+            {'a': 1, 'c': {'a': 2, 'b': {'x': 5, 'y': 9, }}, 'd': [1, 2, 3]},
+            s.unflatten_dict({'a': 1, 'c.a': 2, 'c.b.x': 5,
+                              'c.b.y': 9, 'd': [1, 2, 3]})
         )
 
 
