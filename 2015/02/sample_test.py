@@ -23,13 +23,10 @@ class ReversedDictTest(unittest.TestCase):
             "Palestine": "Jerusalem",
             "Sweden": "Stockholm"
         }
-        output = {
-            'Jerusalem': 'Israel',
-            'Stockholm': 'Sweden',
-            'Vienna': 'Austria'
-        }
 
-        self.assertEqual(output, s.reversed_dict(input))
+        self.assertEqual(s.reversed_dict(input)['Stockholm'], 'Sweden')
+        self.assertEqual(s.reversed_dict(input)['Vienna'], 'Austria')
+        self.assertIn('Jerusalem', s.reversed_dict(input))
 
     def test_empty_dict(self):
         self.assertEqual({}, s.reversed_dict({}))
