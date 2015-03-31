@@ -184,3 +184,18 @@ intertwined_sequences(
 
 # Забележки
 Приемете, че `intertwined_sequences` никога няма да бъде извикан с невалидни аргументи, т.е. нещо различно то списък в дефинирания формат за първи аргумент и опционално `dict` за `generator_definitions`. Ако генератор в `generator_definitions` се нуждае от аргументи, то те задължително ще имат зададена стойност в първото срещане на генератора в списъка дефиниращ поредността.
+
+Стойностите в `generator_definitions` са **функции връщащи итеруеми обекти**.
+
+```python
+>>> list(intertwined_sequences([
+...     {'sequence': 'up_to_ten', 'length': 6},
+...     {'sequence': 'down_from_ten', 'length': 3},
+...     {'sequence': 'up_to_ten', 'length': 4},
+...     {'sequence': 'down_from_ten', 'length': 7},
+... ], generator_definitions={
+...     'up_to_ten': lambda: range(1, 11),
+...     'down_from_ten': lambda: range(10, 0, -1)
+... }))
+[1, 2, 3, 4, 5, 6, 10, 9, 8, 7, 8, 9, 10, 7, 6, 5, 4, 3, 2, 1]
+```
