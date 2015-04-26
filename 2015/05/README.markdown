@@ -65,16 +65,33 @@ sda1 = FileSystem(250 * (1024 ** 3)) # initialize a 250GB file system
 * Всички изключения, които хвърля вашия код трябва да наследяват `FileSystemError`.
 
 ```python
->>> fs = FileSystem(21)
+>>> fs = FileSystem(22)
 >>> fs.size
-21
+22
 >>> fs.available_size
-20
+21
 >>> fs.create('/data', content='Nineteen characters')
 >>> fs.available_size
-0
+1
 >>> try:
 ...     fs.create('/home/gosho')
+... except DestinationNodeDoesNotExistError:
+...     print('Not even a valid place to create')
+... except NotEnoughSpaceError:
+...     print('Getting greedy here')
+...
+Not even a valid place to create
+>>> try:
+...     fs.create('/home')
+... except DestinationNodeDoesNotExistError:
+...     print('Not even a valid place to create')
+... except NotEnoughSpaceError:
+...     print('Getting greedy here')
+...
+>>> try:
+...     fs.create('/home/gosho')
+... except DestinationNodeDoesNotExistError:
+...     print('Not even a valid place to create')
 ... except NotEnoughSpaceError:
 ...     print('Getting greedy here')
 ...
