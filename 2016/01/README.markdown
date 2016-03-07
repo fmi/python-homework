@@ -69,7 +69,7 @@ Blue)`](https://bg.wikipedia.org/wiki/RGB), които ще определят �
 
 Хистограмата на нашата панда изглежда така:
 
-![Хистограма на панда](https://raw.githubusercontent.com/fmi/python-homework/master/2016/01/histogram.jpg)
+![Хистограма на панда](https://raw.githubusercontent.com/fmi/python-homework/master/2016/01/histogram.png)
 
 ## Визуализация
 
