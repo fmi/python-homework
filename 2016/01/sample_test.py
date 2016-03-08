@@ -10,25 +10,34 @@ class TestImages(unittest.TestCase):
         [(0, 255, 0), (0, 255, 0), (255, 0, 0)]]
 
     def test_rotate_left(self):
-        self.assertEqual(
-            solution.rotate_left(self.image),
-            [[(0, 0, 255), (0, 255, 0), (255, 0, 0)],
-             [(0, 255, 0), (0, 0, 255), (0, 255, 0)],
-             [(0, 0, 255), (255, 0, 0), (0, 255, 0)]])
+        rotated = solution.rotate_left(self.image)
+        expected = [[(0, 0, 255), (0, 255, 0), (255, 0, 0)],
+                    [(0, 255, 0), (0, 0, 255), (0, 255, 0)],
+                    [(0, 0, 255), (255, 0, 0), (0, 255, 0)]]
+
+        for i in range(len(rotated)):
+            for j in range(len(rotated[0])):
+                self.assertEqual(expected[i][j], rotated[i][j])
 
     def test_lighten(self):
-        self.assertEqual(
-            solution.lighten(self.image, 0.5),
-            [[(127, 127, 255), (127, 255, 127), (127, 127, 255)],
-             [(255, 127, 127), (127, 127, 255), (127, 255, 127)],
-             [(127, 255, 127), (127, 255, 127), (255, 127, 127)]])
+        lighten = solution.lighten(self.image, 0.5)
+        expected = [[(127, 127, 255), (127, 255, 127), (127, 127, 255)],
+                    [(255, 127, 127), (127, 127, 255), (127, 255, 127)],
+                    [(127, 255, 127), (127, 255, 127), (255, 127, 127)]]
+
+        for i in range(len(lighten)):
+            for j in range(len(lighten[0])):
+                self.assertEqual(expected[i][j], lighten[i][j])
 
     def test_invert(self):
-        self.assertEqual(
-            solution.invert(self.image),
-            [[(255, 255, 0), (255, 0, 255), (255, 255, 0)],
-             [(0, 255, 255), (255, 255, 0), (255, 0, 255)],
-             [(255, 0, 255), (255, 0, 255), (0, 255, 255)]])
+        inverted = solution.invert(self.image)
+        expected = [[(255, 255, 0), (255, 0, 255), (255, 255, 0)],
+                    [(0, 255, 255), (255, 255, 0), (255, 0, 255)],
+                    [(255, 0, 255), (255, 0, 255), (0, 255, 255)]]
+
+        for i in range(len(inverted)):
+            for j in range(len(inverted[0])):
+                self.assertEqual(expected[i][j], inverted[i][j])
 
     def test_create_histogram(self):
         self.assertEqual(
