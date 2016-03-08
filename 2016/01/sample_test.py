@@ -12,9 +12,9 @@ class TestImages(unittest.TestCase):
     def test_rotate_left(self):
         self.assertEqual(
             solution.rotate_left(self.image),
-            [((0, 0, 255), (0, 255, 0), (255, 0, 0)),
-             ((0, 255, 0), (0, 0, 255), (0, 255, 0)),
-             ((0, 0, 255), (255, 0, 0), (0, 255, 0))])
+            [[(0, 0, 255), (0, 255, 0), (255, 0, 0)],
+             [(0, 255, 0), (0, 0, 255), (0, 255, 0)],
+             [(0, 0, 255), (255, 0, 0), (0, 255, 0)]])
 
     def test_lighten(self):
         self.assertEqual(
