@@ -15,8 +15,8 @@ class TestImages(unittest.TestCase):
                     [(0, 255, 0), (0, 0, 255), (0, 255, 0)],
                     [(0, 0, 255), (255, 0, 0), (0, 255, 0)]]
 
-        for i in range(len(rotated)):
-            for j in range(len(rotated[0])):
+        for i in range(len(expected)):
+            for j in range(len(expected[0])):
                 self.assertEqual(expected[i][j], rotated[i][j])
 
     def test_lighten(self):
@@ -25,8 +25,8 @@ class TestImages(unittest.TestCase):
                     [(255, 127, 127), (127, 127, 255), (127, 255, 127)],
                     [(127, 255, 127), (127, 255, 127), (255, 127, 127)]]
 
-        for i in range(len(lighten)):
-            for j in range(len(lighten[0])):
+        for i in range(len(expected)):
+            for j in range(len(expected[0])):
                 self.assertEqual(expected[i][j], lighten[i][j])
 
     def test_invert(self):
@@ -35,8 +35,8 @@ class TestImages(unittest.TestCase):
                     [(0, 255, 255), (255, 255, 0), (255, 0, 255)],
                     [(255, 0, 255), (255, 0, 255), (0, 255, 255)]]
 
-        for i in range(len(inverted)):
-            for j in range(len(inverted[0])):
+        for i in range(len(expected)):
+            for j in range(len(expected[0])):
                 self.assertEqual(expected[i][j], inverted[i][j])
 
     def test_create_histogram(self):
