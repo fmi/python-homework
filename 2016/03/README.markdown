@@ -94,9 +94,17 @@
 
 Връща възможно най-малкото разстояние между два потребителя в социалния граф.
 
-### `nth_layer_friends(self, user_uuid, n)`
+### `nth_layer_followings(self, user_uuid, n)`
 
-Връща всички приятели на потребителя с подаденото `user_uuid` от ниво `n`.
+Връща всички потребители следени от потребителя с подаденото `user_uuid` на
+разстояние `n`.
+
+Пример:
+
+    >>> graph.follow(maria.uuid, ivan.uuid)
+    >>> graph.follow(ivan.uuid, pesho.uuid)
+    >>> list(graph.nth_layer_followings(maria.uuid, 2))
+    <<< [pesho.uuid]
 
 ### `generate_feed(self, user_uuid, offset=0, limit=10)`
 
